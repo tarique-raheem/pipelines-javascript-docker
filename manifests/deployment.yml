@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tariqueraheempipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tariqueraheempipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: tariqueraheempipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tariqueraheempipelinesjavascriptdocker 
+          image: miseacr.azurecr.io/tariqueraheempipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
